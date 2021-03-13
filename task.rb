@@ -98,10 +98,10 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  flatten_sports = sports.flatten
-  flatten_sports2 = flatten_sports.uniq
-  flatten_sports2.each.with_index(1) do |flatten_sport, i|
-    puts "No#{i} #{flatten_sport}"
+  sports.flatten!
+  sports.uniq!
+  sports.each.with_index(1) do |sport, i|
+    puts "No#{i} #{sport}"
   end
 end
 
@@ -127,7 +127,7 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  
 end
 
 def q15
@@ -135,7 +135,7 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+    
 end
 
 def q16

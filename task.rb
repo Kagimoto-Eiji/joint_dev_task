@@ -163,6 +163,7 @@ class UserQ17
     @age = age
     @gender = gender
   end
+
   def info
     puts <<~TEXT
     名前:#{@name}
@@ -188,11 +189,12 @@ class UserQ18
     @name = name
     @age = age
   end
+
   def introduce
     if @age >= 20
-      print "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      "こんにちは，#{@name}と申します。宜しくお願いいたします。"
     elsif @age <= 19
-      print "はいさいまいど〜，#{@name}です！！！"
+      "はいさいまいど〜，#{@name}です！！！"
     end
   end
 end
@@ -208,7 +210,7 @@ end
 
 class Item
   # 以下を修正して下さい
-  attr_accessor :name
+  attr_reader :name
   def initialize(name:)
     @name = name
   end
@@ -222,13 +224,10 @@ end
 
 class UserQ20
   # 以下に回答を記載
-
 end
-
 class Zoo
   # 以下に回答を記載
 end
-
 
 def q20
   # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
